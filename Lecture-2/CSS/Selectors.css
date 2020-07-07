@@ -1,0 +1,52 @@
+/* @import "style1.css"; */
+/* *{
+    font-size: 40px;
+} */
+/* 
+h1{
+    color: red;
+    background-color: cornflowerblue;
+}
+
+li{
+    color: grey;
+}
+
+p span{
+    color: orange;
+}
+
+p{
+    color: green;
+}
+
+#heading{
+    background-color: orangered;
+}
+#para{
+    background-color: orchid;
+}
+
+.bluecolor{
+    color: blue;
+}
+
+.backorchid{
+    background-color: orchid;
+} */
+
+ul>li{
+    font-size: 25px;
+    color: purple;
+}
+a[href]{
+    font-size: 8px;
+}
+
+li[class]{
+    color: saddlebrown;
+}
+/* 
+li~li{
+    color: purple;
+} */
