@@ -11,7 +11,7 @@ a{
 } */
 
 li:hover{
-    background-color: gray;
+    background-color: rgb(148, 149, 60);
 }
 
 li:active{
@@ -24,10 +24,10 @@ input:focus{
 span:only-child{
     color: maroon;
 }
-li:first-child,
+/* li:first-child,
 li:last-child{
     color: magenta;
-}
+} */
 
 a[href^='https']{
     color: maroon;
@@ -40,7 +40,23 @@ a[href$='in']{
 a[href*='coding']{
     color: green;
 }
+/* an+b, b:offset and a : interval */
+/* li:nth-child(2n+2){ 
+    color: orange;
+} */
+li:nth-of-type(2n+2){ 
+    color: orange;
+    background-color: peru;
+}
 
+li:nth-of-type(2n+1){ 
+    color: black;
+    background-color: gray;
+}
+/* 
+li:nth-last-child(-n+8){
+    color: orangered;
+} */
 
 /* li:last-child{
     color: orange;
