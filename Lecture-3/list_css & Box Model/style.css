@@ -1,0 +1,24 @@
+ul{
+    list-style: circle;
+    border: 1px solid black;
+    list-style-position: outside;
+    list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+}
+.circle{
+    background-color: coral;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+div{
+    border: 2px solid black;
+    border-radius: 0px 30% 0px 30% ;
+    margin: 20px 40px 50px 60px; 
+    width: 80px;
+    /* top right bottom left */
+    /* top left&right bottom */
+    /* top&bottom left&right */
+    /* allSides */
+    padding: 3px;
+    mar
+}

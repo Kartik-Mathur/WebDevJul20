@@ -1,0 +1,7 @@
+li li{
+    display: none;
+}
+
+li:hover > * > li{
+    display: block;
+}

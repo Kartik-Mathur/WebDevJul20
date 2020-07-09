@@ -1,0 +1,51 @@
+div{
+    background-color: royalblue;
+    /* overflow: auto; */
+}
+
+img{
+    float: right; 
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div::before,
+div::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* br{
+    clear: both;
+} */
+
+/* p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p:hover{
+    overflow: scroll;
+    text-overflow: clip;
+}
+
+div{
+    border: 1px solid black;
+    width: 300px;
+    height: 80px;
+} */
+
+/* div{
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+    min-width: 400px;
+    max-width: 900px;
+    background-color: blueviolet;
+}
+
+span{
+    border: 2px solid black;
+} */

@@ -1,0 +1,22 @@
+div{
+    border: 2px solid black;
+    margin:15px;
+    background-color: coral;
+}
+
+.two{
+    position: relative;
+    /* position: absolute; */
+    top: 10px;
+    left: 10px;
+}
+
+.five{
+    position: sticky;
+    top: 30px;
+}
+
+.eight{
+    position: fixed;
+    top: -10px;
+}

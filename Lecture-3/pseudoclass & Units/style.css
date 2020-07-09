@@ -1,0 +1,35 @@
+input:enabled{
+    background-color: lightgoldenrodyellow;
+}
+
+
+input:disabled{
+    background-color: gray;
+}
+
+input[type="radio"]:checked+label{
+    font-size: 30px;
+}
+/* Pseudoclasses - enabled, disabled, checked */
+
+/* psuedoElements */
+
+p::first-line{
+    color: orange;
+}
+
+p::first-letter{
+    font-size: 25px;
+}
+
+/* .phone::before{
+    content: url(../img/phone.jpg);
+} */
+
+.phone::after{
+    content: '\260E';
+}
+
+p{
+    font-size: inherit;
+}
