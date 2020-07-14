@@ -1,0 +1,30 @@
+.wrap{
+    width:700px;
+    height: 150px;    
+}
+
+.progbar{
+    width:700px;
+    height: 150px;
+    background-color: crimson;
+    border-radius: 10px;
+    animation-name: anim1;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+}
+/* from{} to{} */
+
+@keyframes anim1{
+    0%{
+        width:0%
+    }
+    50%,
+    60%{
+        width: 40%;
+    }
+    100%{
+        width: 100%;
+    }
+}
