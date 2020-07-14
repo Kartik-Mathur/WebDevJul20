@@ -1,0 +1,36 @@
+.container{
+    width: 80%;
+    height: 700px;
+    background-color: coral;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column-reverse; */
+    /* justify-content: center; */
+    /* align-items: stretch; */
+    /* align-content: flex-end; */
+}
+
+.ten{
+    order: -1;
+}
+.nine{
+    order: -2;
+    /* align-self: flex-end; */
+}
+.fifteen{
+    flex-grow: 2;
+}
+.sixteen{
+    flex-grow: 1;
+}
+.eight{
+    order: 0;
+}
+
+div{
+    height: 50px;
+    width: 5%;
+    background-color: cornflowerblue;
+    margin: 10px;
+    /* order: 1; */
+}

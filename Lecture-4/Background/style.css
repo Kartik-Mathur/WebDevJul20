@@ -1,0 +1,11 @@
+.div{
+    background-color: blueviolet;
+    background-image: url('../Vegeta.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-attachment: fixed;
+    background: ;
+    height: 600px;
+    width: 1200px;
+}
