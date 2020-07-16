@@ -1,0 +1,22 @@
+@media only screen and (min-width:468px){
+    /* This means 468px and above */
+    .col{
+        float: left;
+    }
+    .main{
+        width: 65%;
+    }
+    .secondary{
+        width: 32%;
+        margin-left: 2%;
+    }
+    .extra{
+        display: block;
+        width: 99%;
+    }
+    .content::after{
+        display: table;
+        content: "";
+        clear: both;
+    }
+}

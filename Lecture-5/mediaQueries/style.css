@@ -1,0 +1,67 @@
+body{
+    background-color: whitesmoke;
+    font: 1.2em/1.5 sans-serif;
+    margin: 0;
+    color: white;
+    padding-top: 25px;
+}
+
+.wrap{
+    width: 90%;
+    margin: auto;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav a:last-child{
+    border: none;
+}
+
+.main-nav a{
+    border-right: dotted 2px;
+    text-decoration: none;
+    color: wheat;
+}
+
+.secondary{
+    background-color: rgb(130,255,130);
+}
+
+.extra{
+    background-color: tomato;
+}
+
+.main-footer{
+    background-color: grey;
+}
+
+.logo:hover,
+.main-nav a:hover{
+    text-decoration: underline;
+}
+
+.main-header,
+.main-footer{
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 1%;
+}
+
+.col{
+    height: 240px;
+    margin: 10px 0px;
+}
+
+.main-header{
+    background-color: darkslateblue;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.main{
+    background: rgb(145,195,246);
+}
