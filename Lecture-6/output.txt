@@ -1,0 +1,44 @@
+{} + []
+0
+[] + {}
+"[object Object]"
++[]
+0
+Number(' ')
+0
++' '
+0
++'abc'
+NaN
+parseInt('11.2123')
+11
+parseFloat('11.2123')
+11.2123
+parseFloat(11.2123)
+11.2123
+parseInt(11.2123)
+11
++[[[[]]]]
+0
+[[],[]]
+(2) [Array(0), Array(0)]0: []1: []length: 2__proto__: Array(0)
++[[],[]]
+NaN
+[[],[]] + ''
+","
+[[1],[2]] + ''
+"1,2"
+[[1],[2],[3]] + ''
+"1,2,3"
+[1,2,3].toString()
+"1,2,3"
+[[1],[2],[3]].toString()
+"1,2,3"
+Infinity
+Infinity
+-Infinity
+-Infinity
+Infinity + 100
+Infinity
+Infinity - Infinity
+NaN
