@@ -1,0 +1,19 @@
+.col{
+    float: left;
+}
+.main{
+    width: 65%;
+}
+.secondary{
+    width: 32%;
+    margin-left: 2%;
+}
+.extra{
+    display: block;
+    width: 99%;
+}
+.content::after{
+    display: table;
+    content: "";
+    clear: both;
+}

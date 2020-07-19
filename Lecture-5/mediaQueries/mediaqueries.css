@@ -1,5 +1,5 @@
-@media only screen and (min-width:468px){
-    /* This means 468px and above */
+/* @media only screen and (min-width:468px) and (max-width:768px){
+    This means 468px and above
     .col{
         float: left;
     }
@@ -18,5 +18,38 @@
         display: table;
         content: "";
         clear: both;
+    }
+} */
+
+@media only screen and (min-width:769px){
+    /* Applied all the sizes above 769px */
+    .logo{
+        float: left;
+    }
+    .main-nav{
+        float: right;
+    }
+    .main-header::after{
+        display: table;
+        content: "";
+        clear: both;
+    }  
+    .col{
+        display: inline-block;
+    }  
+    .main{
+        width: 99.9%;
+        max-width: 1300px;
+    }
+    .secondary,
+    .extra{
+        width: 48.5%;
+        /* max-width: 615.45px; */
+    }
+    .extra{
+        margin-left:1.5%;
+    }
+    .wrap{
+        max-width: 1300px;
     }
 }
