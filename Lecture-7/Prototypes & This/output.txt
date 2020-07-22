@@ -1,0 +1,127 @@
+a
+{k: 1, l: "Kartik", m: true}
+b
+{}
+c
+{}
+b.k
+1
+b.l
+"Kartik"
+c.k
+1
+c.m
+true
+c.hasOwnProperty('k')
+false
+b.hasOwnProperty('k')
+false
+a.hasOwnProperty('k')
+true
+c.__proto__ 
+{}
+c.__proto__  == b
+true
+c.__proto__.__proto__
+{k: 1, l: "Kartik", m: true}
+c.__proto__.__proto__ == a
+true
+
+a.__proto__
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()arguments: (...)caller: (...)length: 0name: "toString"__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[Scopes]]: Scopes[0]valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+Object.prototype
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+a.__proto__ == Object.prototype
+true
+Object
+ƒ Object() { [native code] }
+Object.prototype.constructor
+ƒ Object() { [native code] }
+Object.prototype.constructor == Object
+true
+Object.prototype.__proto__
+null
+
+
+b.k
+1
+b.k++
+1
+a
+{k: 1, _l: "Kartik", m: true}
+b
+{k: 2}
+b.hasOwnProperty('k')
+true
+c.k
+2
+let x = 10
+undefined
+x.__proto__
+Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, …}
+x.__proto__.__pr
+undefined
+x.__proto__.__proto__
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+x = " Kartik "
+" Kartik "
+x.__proto__.__proto__
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+x.__proto__
+String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}anchor: ƒ anchor()big: ƒ big()blink: ƒ blink()bold: ƒ bold()charAt: ƒ charAt()charCodeAt: ƒ charCodeAt()codePointAt: ƒ codePointAt()concat: ƒ concat()constructor: ƒ String()endsWith: ƒ endsWith()fixed: ƒ fixed()fontcolor: ƒ fontcolor()fontsize: ƒ fontsize()includes: ƒ includes()indexOf: ƒ indexOf()italics: ƒ italics()lastIndexOf: ƒ lastIndexOf()length: 0link: ƒ link()localeCompare: ƒ localeCompare()match: ƒ match()matchAll: ƒ matchAll()normalize: ƒ normalize()padEnd: ƒ padEnd()padStart: ƒ padStart()repeat: ƒ repeat()replace: ƒ replace()search: ƒ search()slice: ƒ slice()small: ƒ small()split: ƒ split()startsWith: ƒ startsWith()strike: ƒ strike()sub: ƒ sub()substr: ƒ substr()substring: ƒ substring()sup: ƒ sup()toLocaleLowerCase: ƒ toLocaleLowerCase()toLocaleUpperCase: ƒ toLocaleUpperCase()toLowerCase: ƒ toLowerCase()toString: ƒ toString()toUpperCase: ƒ toUpperCase()trim: ƒ trim()trimEnd: ƒ trimEnd()trimLeft: ƒ trimStart()trimRight: ƒ trimEnd()trimStart: ƒ trimStart()valueOf: ƒ valueOf()Symbol(Symbol.iterator): ƒ [Symbol.iterator]()__proto__: Object[[PrimitiveValue]]: ""
+x = true
+true
+x.__proto__
+Boolean {false, constructor: ƒ, toString: ƒ, valueOf: ƒ}
+x.__proto__.__proto__
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+x.__proto__ == Boolean.prototype
+true
+x = " Kartik "
+" Kartik "
+x.__proto__ == String.prototype
+true
+
+typeof Number
+"function"
+typeof Boolean
+"function"
+typeof String
+"function"
+typeof Function
+"function"
+Number('1').__proto__ == Number.prototype
+true
+
+Number()
+0
+String()
+""
+Boolean()
+false
+Boolean().__proto__ == Boolean.prototype
+true
+String().__proto__ == String.prototype
+true
+Function.__proto__ == Function.prototype
+true
+
+f().__proto__ == Function.prototype
+false
+Boolean().__proto__ == Boolean.prototype
+true
+String().__proto__ == String.prototype
+true
+Boolean
+ƒ Boolean() { [native code] }
+Function()
+ƒ anonymous(
+) {
+
+}
+Boolean()
+false
+Boolean.prototype
+Boolean {false, constructor: ƒ, toString: ƒ, valueOf: ƒ}
+Function.prototype
+ƒ () { [native code] }
