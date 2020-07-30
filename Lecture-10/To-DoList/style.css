@@ -1,0 +1,15 @@
+button{
+    margin:3px;
+    /* background-color: cornflowerblue;
+    font-style: oblique;
+    font-weight: 700;
+    height: 20px;
+    width: 60px; */
+}
+
+ul li:first-child .btnup{
+    visibility: hidden;
+}
+ul li:last-child .btndn{
+    visibility: hidden;
+}
