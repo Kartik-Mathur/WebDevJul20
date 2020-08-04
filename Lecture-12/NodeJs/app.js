@@ -1,13 +1,6 @@
 const https = require('https')
 let url = 'https://wwwcat-fact.herokuapp.com/facts'
-BigInt.onclick = function(){
-    let city = $('#inp').val()
-    let apikey = 'asdbasjdabdkba'
-    let url = `https://weather.com/q=${city}&appid=${apikey}`
-    https.get(url,(response)=>{
-        
-    })
-}
+
 const request = https.get(url,(response)=>{
     // console.log(response.statusCode)
     if(response.statusCode == 200){
@@ -32,3 +25,13 @@ request.on('error',(err)=>{
     console.log("Printing Error")
     console.log(`Error : ${err}`)
 }) 
+
+try{
+    let x = 10
+    let a = {}
+    a.b = 100
+    console.log(a.b)
+}
+catch{
+    console.log('a doesnot contain b')
+}
