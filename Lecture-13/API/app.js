@@ -6,8 +6,8 @@ app.use('/',express.static(__dirname+'/Static'))
 
 app.get('/addtodo',(req,res)=>{
     todo.push(req.query.task)
-    // res.send('Task Added Successfully')
-    res.redirect('/todo')
+    res.send('Success')
+    // res.redirect('/todo')
 })
 
 app.get('/todo',(req,res)=>{
