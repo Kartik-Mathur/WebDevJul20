@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>Learning Handlebars</h1>
+
+    <form action="/hi" method="POST">
+        <input type="text" name="name">
+        <input type="number" name="id">
+        <button type="submit">Click</button>
+    </form>
+        <ul>
+        {{#each users as |x|}}
+            <li><b>{{x.name}}</b> id: {{x.id}} </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
