@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To do List</h1>
+    <form method="POST" action="/todo">
+        <input type="text" name="name">
+        <input type="number" name="priority">
+        <button type="submit">Click Me!</button>
+    </form>
+    <ul>
+        {{#each todo as |item|}}
+            <li>{{item.id}} - {{item.name}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>
