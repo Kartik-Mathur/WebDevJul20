@@ -5,6 +5,7 @@ const socketio = require('socket.io')
 const app = express()
 const server = http.Server(app)
 const io = socketio(server)
+let mapping = {}
 
 app.use('/',express.static(__dirname+'/static'))
 
@@ -13,10 +14,17 @@ io.on('connection',(socket)=>{
     socket.emit('successfull',{
         msg:"Connected Succcessfully"
     })
-
-    socket.on('btn-clicked',()=>{
-        console.log(socket.id + ' '+ "Clicked the btn")
-        socket.emit('click-success')
+    socket.on('sending-msg',(data)=>{
+        console.log(socket.id + ' says '+ data.msg)
+        io.emit('recieved-msg',{
+            msg:data.msg,
+            name:mapping[socket.id] 
+        })
+    })
+    
+    socket.on('login',(data)=>{
+        mapping[socket.id] = data.name
+        socket.emit('login-success')
     })
 })
 
