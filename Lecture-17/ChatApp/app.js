@@ -16,7 +16,8 @@ io.on('connection',(socket)=>{
     })
     socket.on('sending-msg',(data)=>{
         console.log(socket.id + ' says '+ data.msg)
-        io.emit('recieved-msg',{
+        // io.emit, socket.emit
+        socket.broadcast.emit('recieved-msg',{
             msg:data.msg,
             name:mapping[socket.id] 
         })
