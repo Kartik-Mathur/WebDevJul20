@@ -1,0 +1,17 @@
+const express = require('express')
+const http = require('http')
+const socketio = require('socket.io')
+
+const app = express()
+const server = http.Server(app)
+const io = socketio(server)
+
+app.use('/',express.static(__dirname+'/static'))
+// console.log(io)
+io.on('connection',()=>{
+    console.log('Connection Established')
+})
+
+server.listen(4444,()=>{
+    console.log('Server started at http://localhost:4444')
+})
