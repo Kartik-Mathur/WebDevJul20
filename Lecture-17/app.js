@@ -8,8 +8,8 @@ const io = socketio(server)
 
 app.use('/',express.static(__dirname+'/static'))
 // console.log(io)
-io.on('connection',()=>{
-    console.log('Connection Established')
+io.on('connection',(socket)=>{
+    console.log('Connection Established '+socket.id)
 })
 
 server.listen(4444,()=>{
