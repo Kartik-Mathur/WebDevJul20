@@ -7,13 +7,9 @@ MongoClient.connect(DB_PATH,(err,client)=>{
     const testdb = client.db('testdb')
     const people = testdb.collection('people')
 
-    people.find({
-        $and:[
-            {age: { $lt:25 } },
-            {age: { $gt:20 } }
-        ]
-    }).toArray((err,results)=>{
+    people.deleteOne({name:'Jatin'},(err,results)=>{
         if(err) throw err
+        console.log("Deleted Successfully")
         console.log(results)
     })
 
