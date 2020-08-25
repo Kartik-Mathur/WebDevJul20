@@ -1,6 +1,17 @@
 const express = require('express')
 const route = express.Router()
 const User = require('../models/user')
+
+// Get /logout
+route.get('/logout',(req,res,next)=>{
+    if(req.session){
+        req.session.destroy(err=>{
+            if(err) return next(err)
+            return res.redirect('/')
+        })
+    }
+})
+
 // Get /profile
 route.get('/profile',(req,res,next)=>{
     // return res.render('profile',{title:'Profile'})

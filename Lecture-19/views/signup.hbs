@@ -14,5 +14,8 @@
         <input type="text" name="movie" placeholder="Movie Name"><br><br>
         <button type="submit">Submit!</button>
     </form>
+    {{#if currentUser}}
+        <h1>Current User is logged IN</h1>
+    {{/if}}
 </body>
 </html>
