@@ -23,6 +23,23 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
+UserSchema.statics.authenticate = (email,password,cb)=>{
+    User.findOne({email})
+        .exec((err,user)=>{
+            if(err) return cb(err)
+            else if(!user) {
+                let err = new Error('User Not Found!')
+                err.status = 401
+                return next(err)
+            }
+            bcrypt.compare(password, user.password, function(err, result) {
+                if(err) return cb(err)
+                if(result == true)
+                    return cb(null,user)
+            })
+        })
+}
+
 UserSchema.pre('save',function(next){
     // Whichever user we are about to add inside the mongoDB, we can get the user here itself using this
     let user = this

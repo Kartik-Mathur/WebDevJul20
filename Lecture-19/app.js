@@ -2,9 +2,16 @@ const express = require('express')
 const app = express()
 const route = require('./routes/index')
 const mongoose = require('mongoose')
+const session = require('express-session')
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(session({
+    secret: 'bjksdbsfsdkfnksfjkskfksjdkfsbfbksdbfks',
+    resave: false,
+    saveUninitialized: true
+}))
+
 
 app.set('view engine','hbs')
 app.use('/',route)
@@ -15,6 +22,8 @@ const db = mongoose.connection
 db.on('error', err=>{
     console.error(err)
 })
+
+
 
 app.listen(4444,()=>{
     console.log('Server started at http://localhost:4444')

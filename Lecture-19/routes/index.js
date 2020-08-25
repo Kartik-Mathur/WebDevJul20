@@ -4,14 +4,41 @@ const User = require('../models/user')
 // Get /profile
 route.get('/profile',(req,res,next)=>{
     // return res.render('profile',{title:'Profile'})
-    return res.send('Profile Page')
+    if(!req.session.userID){
+        return res.redirect('/login')
+    }
+    User.findById(req.session.userID)
+        .exec((err,user)=>{
+            if(err) return next(err)
+            return res.render('profile',{title:'Profile',name:user.name,movie:user.movie})
+        })
 })
 
 // GET /login
 route.get('/login',(req,res,next)=>{
     return res.render('login',{title:'Log In'})
 })
+// POST /login
+route.post('/login',(req,res,next)=>{
+    if(req.body.email && req.body.password){
+        User.authenticate(req.body.email,req.body.password,(err,user)=>{
+            if(err || !user){
+                let err = new Error('Wrong Email or Password')
+                err.status = 401
+                return next(err)
+            }   
 
+            // sab kuch shi hai then we should create a cookie with userID and redirect to profile
+            req.session.userID = user._id
+            return res.redirect('/profile')
+        })
+    }   
+    else{
+        let err = new Error('You need to enter both email and password')
+        err.status = 401 // Means : Forbidden
+        return next(err)
+    }
+})
 // Get /register
 route.get('/register',(req,res,next)=>{
     return res.render('signup',{title:'Sign Up'})
@@ -27,6 +54,7 @@ route.post('/register',(req,res,next)=>{
         }
         User.create(userData,(err,user)=>{
             if(err) return next(err)
+            req.session.userID = user._id
             return res.redirect('/profile')
         })
     }
