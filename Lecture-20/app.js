@@ -1,8 +1,20 @@
 const express = require('express')
 const app = express()
 const {db} = require('./db')
+const session = require('express-session')
+const passport = require('./passport')
+
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+
+app.use(session({
+    secret:'nasknjakasbidsamfkropgrwnk',
+    resave:false,
+    saveUninitialized:true
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.set('view engine','hbs')
 
