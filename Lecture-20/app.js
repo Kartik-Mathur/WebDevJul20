@@ -20,6 +20,7 @@ app.set('view engine','hbs')
 
 app.use('/login',require('./routes/login').route) // /login/.... or /login/abc/a or /login
 app.use('/signup',require('./routes/signup').route) 
+app.use('/profile',require('./routes/profile').route) 
 
 
 db.sync()
