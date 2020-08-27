@@ -6,9 +6,13 @@ const passport = require('passport')
 route.get('/',(req,res)=>{
     return res.render('login')
 })
-route.get('/faliure',(req,res)=>{
-    return res.send('Login Failed')
-})
+
+route.get('/facebook',passport.authenticate('facebook'))
+
+route.get('/facebook/callback',passport.authenticate('facebook',{
+    successRedirect:'/profile',
+    failureRedirect:'/login'
+}))
 
 route.post('/',passport.authenticate('local',{
     successRedirect:'/profile',

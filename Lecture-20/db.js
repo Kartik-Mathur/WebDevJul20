@@ -8,15 +8,18 @@ const db = new Sequelize({
 const Users = db.define('user',{
     username:{
         type:Sequelize.STRING(30),
-        allowNull:false,
-        unique:true
     },
     password:{
         type:Sequelize.STRING(30),
-        allowNull:false
     },
     email:{
         type:Sequelize.STRING(30)
+    },
+    fbId:{
+        type:Sequelize.STRING(30)
+    },
+    fbToken:{
+        type:Sequelize.TEXT
     }
 })
 

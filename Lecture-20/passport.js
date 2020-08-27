@@ -1,5 +1,6 @@
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const FacebookStrategy = require('passport-facebook').Strategy
 const {Users} = require('./db')
 
 passport.serializeUser(function(user, done) {
@@ -13,6 +14,22 @@ passport.deserializeUser(function(userId, done) {
         done(null,user)
     }).catch(done)
 })
+
+passport.use(new FacebookStrategy({
+    clientID: '2636812766583596',
+    clientSecret: 'XXXXXXXXX',
+    callbackURL: "http://localhost:4444/login/facebook/callback"
+  },
+  function(token, rt, profile, done) {
+    Users.create({
+        username: profile.displayName,
+        fbId:profile.id,
+        fbToken:token
+    }).then((user)=>{
+        done(null,user)
+    }).catch(done)
+  }
+))
 
 passport.use(new LocalStrategy((username,password,done)=>{
     Users.findOne({

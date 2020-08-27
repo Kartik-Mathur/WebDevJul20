@@ -23,7 +23,7 @@ app.use('/signup',require('./routes/signup').route)
 app.use('/profile',require('./routes/profile').route) 
 
 
-db.sync()
+db.sync({alter:true})
     .then(()=>{
         app.listen(4444,()=>{
             console.log('Server started at http://localhost:4444')
